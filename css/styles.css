@@ -77,7 +77,7 @@ body {
     font-family: 'Roboto Slab', Arial, sans-serif;  /* Google Font for main content */
     line-height: 1.6;               /* Improved readability with 1.6 line height */
     color: #333;                    /* Primary text color (dark gray) */
-    background-color: #f8f8f8;      /* Modified background color - softer gray */
+    background-color: #000;         /* Black background for page sides */
     padding: 0 20px;                /* Added horizontal padding to prevent content from touching edges */
 }
 
@@ -175,6 +175,10 @@ header img {
 .menu-toggle.active .hamburger::after {
     bottom: 0;                       /* Move to center */
     transform: rotate(-45deg);        /* Rotate -45 degrees */
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px) {
 }
 
 /*
@@ -340,7 +344,7 @@ footer {
     color: #fff;                     /* White text for contrast */
     text-align: center;              /* Center-aligned footer content */
     padding: 20px;                   /* Consistent padding */
-    margin-top: 40px;                /* Space above footer */
+    margin-top: 0;                   /* No gap between main and footer */
 }
 
 /*
@@ -388,6 +392,27 @@ footer a {
 
 .contact-page iframe {
     margin-top: 20px;                /* Space above map */
+}
+
+/*
+ * Phone Button - Style for phone number button on contact page
+ */
+.phone-button {
+    display: inline-block;            /* Block display for proper sizing */
+    background-color: #404040;        /* Dark gray background */
+    color: #fff;                      /* White text */
+    padding: 15px 30px;               /* Padding for button size */
+    font-size: 1.5em;                 /* Large font size */
+    text-decoration: none;             /* Remove underline */
+    border: none;                     /* No border */
+    border-radius: 0;                 /* Square corners */
+    margin: 20px 0;                   /* Vertical spacing */
+    cursor: pointer;                  /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.phone-button:hover {
+    background-color: #555;           /* Lighter gray on hover */
 }
 
 /*
@@ -672,7 +697,7 @@ a:hover {
  * - This creates a distinct content block for equipment information
  */
 .exercise-section {
-    background-color: #f0f0f0;       /* Light background for separation */
+    background: linear-gradient(to bottom, #d0d0d0, #fff);  /* Gradient from dark gray to white */
     padding: 20px;                   /* Internal spacing */
     margin: 20px 0;                  /* External spacing */
     border-top: 2px solid #333;       /* Top border for definition */
@@ -814,11 +839,11 @@ a:hover {
     }
     
     /*
-     * Body Mobile - Light background for content pages
+     * Body Mobile - Black background for content pages
      */
     body:not(.nav-page) {
-        background-color: #f8f8f8;
-        color: #333;
+        background-color: #000;
+        color: #fff;
     }
     
     /*
@@ -843,8 +868,8 @@ a:hover {
      */
     body:not(.nav-page) main {
         display: block;
-        background-color: #fff;
-        color: #333;
+        background-color: #000;
+        color: #fff;
         padding: 3% 5%;
         font-size: 1.1em;
     }
@@ -899,10 +924,10 @@ a:hover {
      * Footer Mobile - Content page footer
      */
     body:not(.nav-page) footer {
-        background-color: #333;
+        background-color: #000;
         color: #fff;
         position: relative;
-        margin-top: 40px;
+        margin-top: 0;
     }
     
     body:not(.nav-page) footer p {
